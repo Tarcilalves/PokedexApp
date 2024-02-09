@@ -1,0 +1,98 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    /* considera a borda como o tamanho total para facilitar o atributos de tamanhos com max-widht*/
+    box-sizing: border-box;
+}
+
+:root{
+    
+    --backgroundButton: rgba(255, 255, 255, 0.25);
+   
+    --branco:      #ffff;
+    --preto:       #0000;
+    --buttonColor: #6c79db;
+
+    --normal:   #a6a877;
+    --grass:    #16C4A3;
+    --fire:     #FF6263;
+    --water:    #5CB1F9;
+    --electric: #cfa43e;
+    --ice:      #98d5d7;
+    --ground:   #d8bd74;
+    --flying:   #a98ff0;
+    --poison:   #a040a0;
+    --fighting: #91211b;
+    --psychic:  #f65687;    
+    --dark:     #725847;    
+    --rock:     #b8a137;    
+    --bug:      #a8b720;    
+    --ghost:    #6e5896;    
+    --steel:    #b9b7cf;    
+    --dragon :  #6f38f6;    
+    --fairy:    #f9aec7;
+
+}
+
+body{
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer "    
+    ;
+
+    grid-template-columns: 1fr;
+    margin: 0 4vw 0 4vw;
+    background-color: var(--branco);
+     
+    background-image: url("../image/Exclude.svg");
+    background-repeat: no-repeat;
+    background-position: right -45vw ;
+    background-size: 80%;
+}
+
+.o-heade{
+    grid-area: header; 
+    
+}
+
+.o-principal{
+    grid-area: main;
+}
+
+.o-footer{
+    grid-area: footer;
+}
+
+/* Aplicando responsividade */
+
+@media screen and (min-width: 380px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding-bottom: 2rem;
+    }
+
+    body{
+        background-size: 60%;
+        background-position: right -35vw ;
+        margin: 0 20vw 0 20vw;
+        
+    }
+   
+
+   
+     
+}
